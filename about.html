@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html data-wf-domain="portfolixtemplate.webflow.io" data-wf-page="667c754c9d223413082639e3" data-wf-site="667c1fe7c451b2511da725f9" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>About Me - John Carter | Senior UI/UX & Product Designer</title>
+    <meta content="Learn more about John Carter, a Senior Product and UI/UX Designer crafting high-impact digital experiences." name="description" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    
+    <!-- Favicon -->
+    <link href="assets/images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    
+    <!-- Google Fonts: Inter (100 to 900) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+
+    <!-- Core & Custom Stylesheets -->
+    <link href="assets/css/webflow.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/design-system.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        .nav-center-link.active {
+            color: var(--ds-text-primary) !important;
+            font-weight: 600 !important;
+        }
+        .nav-center-link.active::after {
+            width: 100% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- Floating Header & Navigation -->
+        <header class="header-container sticky-alt">
+            <div class="w-layout-blockcontainer container-default w-container">
+                <div data-animation="default" class="header-wrapper v1 w-nav" data-collapse="all" role="banner">
+                    <div class="header-wrapper header-floating">
+                        <div class="header-container-wrapper">
+                            <!-- Logo -->
+                            <div class="nav-menu-left-side">
+                                <div class="v1-logo-wrapper">
+                                    <a href="index.html" class="logo-link w-inline-block" title="Portfolix X">
+                                        <img src="assets/images/logo.png" loading="eager" alt="Portfolix X Logo" />
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Middle Navigation Links (Desktop) -->
+                            <nav class="nav-menu-center-links" role="navigation">
+                                <a href="index.html" class="nav-center-link">Home</a>
+                                <a href="about.html" class="nav-center-link active">About me</a>
+                                <a href="work.html" class="nav-center-link">Work</a>
+                                <a href="contact.html" class="nav-center-link">Contact</a>
+                            </nav>
+
+                            <!-- Right Side: Let’s talk Button & Hamburger Menu Button -->
+                            <div class="nav-menu-right-side">
+                                <a href="contact.html" class="primary-button small header-shop-btn header-cta-btn w-inline-block" title="Let’s talk">
+                                    <div>Let’s talk</div>
+                                    <div class="button-icon-right small">
+                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                                            <polyline points="7 7 17 7 17 17"></polyline>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="hamburger-menu v2 w-nav-button" id="hamburgerBtn" aria-label="Open menu" role="button" tabindex="0">
+                                    <div class="hamburger-menu-flex v2">
+                                        <div class="hamburger-menu-line top"></div>
+                                        <div class="hamburger-menu-line bottom"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Full-Page Menu Drawer Modal -->
+        <div class="nav-menu-wrapper full-page-menu v1" id="menuDrawer">
+            <div class="full-page-menu---bg v1" id="menuBackdrop"></div>
+            <div class="list-nav-menu header-v1">
+                <div class="w-layout-blockcontainer container-default width-100 w-container">
+                    <div class="card-menu-wrapper">
+                        <div class="card-menu">
+                            <div class="card-menu---top-content">
+                                <div class="availability-wrapper">
+                                    <div class="availability-icon"></div>
+                                    <div class="text-light">
+                                        <div class="display-1 mid v2-alt" style="color: #fff; font-size: 16px; font-weight: 500;">Available for <span class="text-no-wrap">new projects</span></div>
+                                    </div>
+                                </div>
+                                <div class="card-menu---close-button" id="menuCloseBtn" title="Close menu">
+                                    <div>&#x2715;</div>
+                                </div>
+                            </div>
+                            <div class="mg-top-default mg-top-24px---mbl">
+                                <div class="card-menu---links-wrapper">
+                                    <a href="contact.html" class="card-menu---link w-inline-block">
+                                        <div class="left-icon"><div class="icon-font-rounded">&#xe810;</div></div>
+                                        <div>Contact</div>
+                                    </a>
+                                    <a href="index.html#services" class="card-menu---link w-inline-block">
+                                        <div class="left-icon"><div class="icon-font-rounded">&#xe810;</div></div>
+                                        <div>Services</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mg-top-default mg-top-24px---mbl">
+                                <div class="w-layout-grid card-menu---pages-grid">
+                                    <a href="index.html" class="card-menu---link v2 w-inline-block"><div>Home</div></a>
+                                    <a href="about.html" class="card-menu---link v2 w-inline-block w--current"><div>About me</div></a>
+                                    <a href="work.html" class="card-menu---link v2 w-inline-block"><div>Work</div></a>
+                                    <a href="index.html#shop" class="card-menu---link v2 w-inline-block"><div>Shop</div></a>
+                                    <a href="index.html#blog" class="card-menu---link v2 w-inline-block"><div>Blog</div></a>
+                                </div>
+                            </div>
+                            <div class="divider tertiary mg-default"></div>
+                            <div>
+                                <div class="display-3" style="color: rgba(255,255,255,0.7); font-size: 14px;">Follow me:</div>
+                                <div class="mg-top-extra-small">
+                                    <div class="social-media-grid small">
+                                        <a href="https://www.behance.net/rasidulislamsajib1" target="_blank" rel="noopener noreferrer" class="text-link light">Behance</a>
+                                        <a href="https://www.linkedin.com/in/rasidulislamsajib1/" target="_blank" rel="noopener noreferrer" class="text-link light">LinkedIn</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="main-wrapper">
+            <!-- 1. ABOUT ME HERO SECTION (PORTFOLIX X EXACT MATCH FROM SPA) -->
+            <section class="section hero-section---v4">
+                <div class="w-layout-blockcontainer container-default w-container">
+                    <div class="w-layout-grid grid-2-columns hero-section---v4-grid">
+                        <div class="card-frame about-card-frame">
+                            <img src="assets/images/hi-im-jhon-carter-portfolix-x.jpg" loading="eager" alt="Hi I'm Rasidul Islam" class="card-frame-image hero-section---v4---image" />
+                            <div class="card-frame-dot"></div>
+                        </div>
+                        <div class="hero-section---v4---content">
+                            <div class="inner-container _480px">
+                                <div class="inner-container _450px---mbl center">
+                                    <div class="inner-container _400px---tablet _100-mbl">
+                                        <div class="heading-wrapper w-clearfix">
+                                            <img src="assets/images/peace-icon-portfolix-x.png" loading="eager" alt="Peace Icon" class="heading-icon alt---mbl" />
+                                            <h1 class="display-10">Hi, I’m Rasidul Islam</h1>
+                                        </div>
+                                    </div>
+                                    <div class="mg-top-small">
+                                        <p>I’m a Product-focused Designer &amp; Developer passionate about turning ideas and business challenges into meaningful digital products. I combine UI/UX, visual design, branding, and modern development to create experiences that are both engaging and built to solve real problems.</p>
+                                    </div>
+                                </div>
+                                <div class="mg-top-medium mg-top-32px---mbl">
+                                    <div class="buttons-row left center-mbl">
+                                        <a href="work.html" class="primary-button w-inline-block">
+                                            <div>View my work</div>
+                                            <div class="button-icon-right">
+                                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <a href="contact.html" class="link mid w-inline-block">
+                                            <div class="item-icon-left">
+                                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                                </svg>
+                                            </div>
+                                            <div>Contact me</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. LOGO SECTION (FEATURED ON - PORTFOLIX X EXACT MATCH) -->
+            <section class="section">
+                <div class="w-layout-blockcontainer container-default w-container">
+                    <div class="text-center---mbl">
+                        <div>
+                            <div class="display-3">My work has been <span class="text-no-wrap">featured on:</span></div>
+                        </div>
+                        <div class="mg-top-large">
+                            <div class="logo-strip-wrapper---grid">
+                                <div class="logo-stripe-wrapper"><img src="assets/images/logos/company.svg" loading="eager" alt="Company Logo - Portfolix X Webflow Template" /></div>
+                                <div class="logo-stripe-wrapper"><img src="assets/images/logos/agency.svg" loading="eager" alt="Agency Logo - Portfolix X Webflow Template" /></div>
+                                <div class="logo-stripe-wrapper"><img src="assets/images/logos/venture.svg" loading="eager" alt="Venture Logo - Portfolix X Webflow Template" /></div>
+                                <div class="logo-stripe-wrapper"><img src="assets/images/logos/startup.svg" loading="eager" alt="Startup Logo - Portfolix X Webflow Template" /></div>
+                                <div class="logo-stripe-wrapper"><img src="assets/images/logos/institute.svg" loading="eager" alt="Institute Logo - Portfolix X Webflow Template" /></div>
+                                <div class="logo-stripe-wrapper"><img src="assets/images/logos/enterprise.svg" loading="eager" alt="Enterprise Logo - Portfolix X Webflow Template" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. ABOUT ME & MY STORY (PORTFOLIX X EXACT MATCH) -->
+            <section class="section top-200">
+                <div class="w-layout-blockcontainer container-default w-container">
+                    <div class="inner-container _990px center">
+                        <div class="w-layout-grid grid-2-columns about-me-grid">
+                            <div class="inner-container _480px _100-mbl">
+                                <div class="inner-container _500px---mbl">
+                                    <h2 class="display-9 mid">About me</h2>
+                                    <div class="mg-top-small">
+                                        <p>I’m Rasidul Islam, a Product-focused Designer &amp; Developer who enjoys turning ideas, business challenges, and complex requirements into simple and meaningful digital experiences.</p>
+                                        <p class="mg-top-small">My work brings together UI/UX design, visual design, branding, and modern development. I care about more than how a product looks—I think about how it works, how people experience it, and how design can create real value for a business.</p>
+                                        <p class="mg-top-small">I also enjoy bringing my designs to life through frontend and full-stack development, using modern tools and AI-powered workflows to move from concept to functional product faster.</p>
+                                    </div>
+                                </div>
+                                <div class="mg-top-medium">
+                                    <div class="buttons-row left">
+                                        <a href="work.html" class="link mid w-inline-block">
+                                            <div class="item-icon-left">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                                </svg>
+                                            </div>
+                                            <div>View my work</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about-me-section---image-container">
+                                <div class="image-wrapper about-me-section---image">
+                                    <img src="assets/images/about-me-image-portfolix-x.png" loading="eager" alt="About Me Image - Portfolix X Webflow Template" class="image border-radius-image-default" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mg-top-extra-large mg-top-64px---mbl">
+                            <div class="w-layout-grid grid-2-columns story-grid">
+                                <div class="image-wrapper story---image-wrapper">
+                                    <img src="assets/images/my-story-image-portfolix-x.jpg" loading="eager" alt="My Story Image - Portfolix X Webflow Template" class="image cover-image responsive---mbl" />
+                                </div>
+                                <div class="inner-container _480px _100-mbl">
+                                    <div class="inner-container _550px---mbl">
+                                        <h2 class="display-9 mid">My story</h2>
+                                        <div class="mg-top-small">
+                                            <p>My journey started in 2021 with graphic design. I began by creating brand visuals, social media content, book covers, and marketing materials, which helped me build a strong foundation in visual communication and design principles.</p>
+                                            <p class="mg-top-small">As I gained experience, my curiosity moved beyond individual graphics. I wanted to understand how people interact with digital products, why certain interfaces feel intuitive, and how design can solve real problems. That led me deeper into UI/UX and product design.</p>
+                                            <p class="mg-top-small">Over time, I expanded my skill set into frontend, backend, and full-stack development. Today, I combine both sides of my skill set to design experiences and turn those ideas into working digital products—from websites and SaaS platforms to business tools and automation solutions.</p>
+                                            <p class="mg-top-small">For me, the goal has always been simple: design with purpose, build with intention, and create products that genuinely help people.</p>
+                                        </div>
+                                        <div class="mg-top-medium">
+                                            <div class="w-layout-grid story---grid">
+                                                <div>
+                                                    <div class="display-8 mid text-titles">5+ Years</div>
+                                                    <div class="mg-top-extra-small">
+                                                        <div class="display-3">Design &amp; Creative Journey</div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="display-8 mid text-titles">3+ Years</div>
+                                                    <div class="mg-top-extra-small">
+                                                        <div class="display-3">UI/UX &amp; Product Design</div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="display-8 mid text-titles">10+</div>
+                                                    <div class="mg-top-extra-small">
+                                                        <div class="display-3">Digital Products &amp; Projects</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. MY SKILLS SECTION (PORTFOLIX X EXACT MATCH FROM SPA) -->
+            <section class="section overflow-hidden">
+                <div class="w-layout-blockcontainer container-default w-container">
+                    <div class="heading-wrapper">
+                        <div class="title-and-arrows alt-mbl">
+                            <div class="flex-horizontal justify-start w-clearfix">
+                                <h2 class="display-9 mid">My skills</h2>
+                                <img src="assets/images/flex-icon-portfolix-x.png" loading="eager" alt="Arm Icon - Portfolix X Webflow Template" class="heading-icon right medium" />
+                            </div>
+                        </div>
+                        <div class="skills-intro-text">
+                            <p>I bring together design, product thinking, and development to create digital experiences that are both visually engaging and genuinely useful.</p>
+                        </div>
+                    </div>
+                    <div class="mg-top-extra-large">
+                        <div class="slider-wrapper skills-slider w-slider">
+                            <div class="slider-mask skills-slider w-slider-mask" id="skillsTrack">
+                                <!-- Slide 1: Graphic Design -->
+                                <div class="mg-right-default w-slide">
+                                    <div class="card skill-card">
+                                        <div class="skills-icon"><img src="assets/images/graphic-design-icon-portfolix-x.png" loading="eager" alt="Graphic Design Icon" class="image" /></div>
+                                        <div class="inner-container _300px---mbp">
+                                            <h3 class="display-5 mid">Graphic Design</h3>
+                                            <div class="mg-top-tiny">
+                                                <p>Creating purposeful visual communication across social media, marketing campaigns, presentations, and digital content with a strong focus on clarity and visual impact.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 2: Brand Identity -->
+                                <div class="mg-right-default w-slide">
+                                    <div class="card skill-card">
+                                        <div class="skills-icon"><img src="assets/images/brand-design-icon-portfolix-x.png" loading="eager" alt="Brand Identity Icon" class="image" /></div>
+                                        <div class="inner-container _300px---mbp">
+                                            <h3 class="display-5 mid">Brand Identity</h3>
+                                            <div class="mg-top-tiny">
+                                                <p>Building distinctive brand identities through thoughtful visual systems, from logos and typography to color, guidelines, and consistent brand experiences.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 3: UI/UX Design -->
+                                <div class="mg-right-default w-slide">
+                                    <div class="card skill-card">
+                                        <div class="skills-icon"><img src="assets/images/ui-ux-design-icon-portfolix-x.png" loading="eager" alt="UI/UX Design Icon" class="image" /></div>
+                                        <div class="inner-container _300px---mbp">
+                                            <h3 class="display-5 mid">UI/UX Design</h3>
+                                            <div class="mg-top-tiny">
+                                                <p>Designing intuitive digital experiences through user flows, wireframes, prototypes, responsive interfaces, and scalable design systems that balance user needs with business goals.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 4: Product Design -->
+                                <div class="mg-right-default w-slide">
+                                    <div class="card skill-card">
+                                        <div class="skills-icon"><img src="assets/images/product-design-icon-portfolix-x.png" loading="eager" alt="Product Design Icon" class="image" /></div>
+                                        <div class="inner-container _300px---mbp">
+                                            <h3 class="display-5 mid">Product Design</h3>
+                                            <div class="mg-top-tiny">
+                                                <p>Connecting user needs, business goals, and technology to shape digital products from early ideas to polished, functional experiences.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 5: Front-end Development -->
+                                <div class="mg-right-default w-slide">
+                                    <div class="card skill-card">
+                                        <div class="skills-icon"><img src="assets/images/front-end-development-icon-portfolix-x.png" loading="eager" alt="Front-end Development Icon" class="image" /></div>
+                                        <div class="inner-container _300px---mbp">
+                                            <h3 class="display-5 mid">Front-end Development</h3>
+                                            <div class="mg-top-tiny">
+                                                <p>Turning designs into responsive, functional web experiences using modern frontend technologies, with attention to performance, usability, and clean implementation.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="secondary-button slider-button skills-slider---left w-slider-arrow-left" id="skillPrevBtn" role="button" tabindex="0" aria-label="previous slide">
+                                <div></div>
+                            </div>
+                            <div class="secondary-button slider-button skills-slider---right w-slider-arrow-right" id="skillNextBtn" role="button" tabindex="0" aria-label="next slide">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. MY CAREER & EDUCATION SECTION -->
+            <section class="section career-section">
+                <div class="w-layout-blockcontainer container-default w-container">
+                    <div class="heading-wrapper center alt-v2 w-clearfix">
+                        <img src="assets/images/brain-icon-portfolix-x.png" loading="eager" alt="Brain Icon - Portfolix X Webflow Template" class="heading-icon medium" />
+                        <h2 class="display-9 mid">My career</h2>
+                    </div>
+                    <div class="career-intro-text text-center mg-top-small">
+                        <p style="font-size: 17px; line-height: 1.6; color: #52525b; max-width: 680px; margin: 0 auto;">A journey from visual design to product-focused design and development, shaped by hands-on experience across branding, UI/UX, digital products, and creative technology.</p>
+                    </div>
+                    <div class="divider mg-extra-large"></div>
+                    <div class="w-layout-grid grid-2-columns career-grid">
+                        <div class="inner-container _300px">
+                            <div class="inner-container _250px---mbl">
+                                <div class="flex-horizontal justify-start w-clearfix">
+                                    <img src="assets/images/ledger-icon-portfolix-x.png" loading="eager" alt="Ledger Icon - Portfolix X Webflow Template" class="heading-icon _48px alt" />
+                                </div>
+                                <div class="mg-top-extra-small">
+                                    <h3 class="display-7 mid">Experience</h3>
+                                </div>
+                                <div class="mg-top-extra-small">
+                                    <p>Selected roles and commercial design experience across SaaS products, agencies, and global clients.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="career-content">
+                            <div class="grid-1-column gap-row-none">
+                                <!-- 1. CodeMoly -->
+                                <div class="resume-card-wrapper">
+                                    <div class="resume-icon">
+                                        <img src="assets/images/career/codemoly.svg" loading="eager" alt="CodeMoly" class="image" />
+                                    </div>
+                                    <div class="resume-card---content-wrapper">
+                                        <div class="resume-card---details-wrapper">
+                                            <div>
+                                                <h4 class="display-4 mid">CodeMoly</h4>
+                                                <div class="mg-top-tiny">
+                                                    <div class="display-3 color-neutral-700">Senior Product Designer &amp; Developer</div>
+                                                </div>
+                                            </div>
+                                            <div class="badge secondary mid"><span class="text-paragraph">Dec 2023 — Present</span></div>
+                                        </div>
+                                        <div class="mg-top-default">
+                                            <div class="inner-container _448px">
+                                                <p>Leading design for CodeMoly&#x27;s SaaS products — from Bebshadar (POS + inventory), which hit 1,000+ installs in its first 15 days, to MolyEcom and MolyLearn. Along the way, I picked up front-end and back-end development to push products further than design alone.</p>
+                                                <p class="mg-top-extra-small" style="font-size: 13.5px; color: #717680; font-weight: 500; margin-top: 10px;"><strong>Selected work:</strong> MolyEcom · Bebshadar · MolyLearn · Freito · MolyFlow</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divider mg-medium"></div>
+                                <!-- 2. CreatiX-IT -->
+                                <div class="resume-card-wrapper">
+                                    <div class="resume-icon">
+                                        <img src="assets/images/career/creatix.svg" loading="eager" alt="CreatiX-IT" class="image" />
+                                    </div>
+                                    <div class="resume-card---content-wrapper">
+                                        <div class="resume-card---details-wrapper">
+                                            <div>
+                                                <h4 class="display-4 mid">CreatiX-IT</h4>
+                                                <div class="mg-top-tiny">
+                                                    <div class="display-3 color-neutral-700">Mid-level Graphic Designer</div>
+                                                </div>
+                                            </div>
+                                            <div class="badge secondary mid"><span class="text-paragraph">Apr 2023 — Oct 2023</span></div>
+                                        </div>
+                                        <div class="mg-top-default">
+                                            <div class="inner-container _448px">
+                                                <p>Rebuilt a company&#x27;s entire brand identity and website — brand recognition up 30%, traffic up 15%. Proof that good design isn&#x27;t decoration, it moves numbers.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divider mg-medium"></div>
+                                <!-- 3. Eporibar -->
+                                <div class="resume-card-wrapper">
+                                    <div class="resume-icon">
+                                        <img src="assets/images/career/eporibar.svg" loading="eager" alt="Eporibar" class="image" />
+                                    </div>
+                                    <div class="resume-card---content-wrapper">
+                                        <div class="resume-card---details-wrapper">
+                                            <div>
+                                                <h4 class="display-4 mid">Eporibar</h4>
+                                                <div class="mg-top-tiny">
+                                                    <div class="display-3 color-neutral-700">Mid-level Graphic Designer</div>
+                                                </div>
+                                            </div>
+                                            <div class="badge secondary mid"><span class="text-paragraph">Oct 2022 — Mar 2023</span></div>
+                                        </div>
+                                        <div class="mg-top-default">
+                                            <div class="inner-container _448px">
+                                                <p>Created social media posts, Facebook cover banners, and marketing designs for e-commerce campaigns, maintaining consistent brand presentation across digital channels.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divider mg-medium"></div>
+                                <!-- 4. Freelancer.com -->
+                                <div class="resume-card-wrapper">
+                                    <div class="resume-icon">
+                                        <img src="assets/images/career/freelancer.svg" loading="eager" alt="Freelancer.com" class="image" />
+                                    </div>
+                                    <div class="resume-card---content-wrapper">
+                                        <div class="resume-card---details-wrapper">
+                                            <div>
+                                                <h4 class="display-4 mid">Freelancer.com</h4>
+                                                <div class="mg-top-tiny">
+                                                    <div class="display-3 color-neutral-700">Graphic Designer</div>
+                                                </div>
+                                            </div>
+                                            <div class="badge secondary mid"><span class="text-paragraph">Jun 2022 — Jun 2023</span></div>
+                                        </div>
+                                        <div class="mg-top-default">
+                                            <div class="inner-container _448px">
+                                                <p>Delivered branding and design work for clients across industries worldwide, winning multiple top-rated contests along the way.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divider mg-medium"></div>
+                                <!-- 5. SwiftWebx -->
+                                <div class="resume-card-wrapper">
+                                    <div class="resume-icon">
+                                        <img src="assets/images/career/swiftwebx.svg" loading="eager" alt="SwiftWebx" class="image" />
+                                    </div>
+                                    <div class="resume-card---content-wrapper">
+                                        <div class="resume-card---details-wrapper">
+                                            <div>
+                                                <h4 class="display-4 mid">SwiftWebx</h4>
+                                                <div class="mg-top-tiny">
+                                                    <div class="display-3 color-neutral-700">Junior Graphic Designer</div>
+                                                </div>
+                                            </div>
+                                            <div class="badge secondary mid"><span class="text-paragraph">Jun 2020 — Oct 2022</span></div>
+                                        </div>
+                                        <div class="mg-top-default">
+                                            <div class="inner-container _448px">
+                                                <p>Where it all started — creating logos, book covers, branding materials, and digital assets that built a strong foundation in visual communication and commercial design principles.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divider mg-extra-large"></div>
+                    <div class="w-layout-grid grid-2-columns career-grid">
+                        <div class="inner-container _300px">
+                            <div class="inner-container _250px---mbl">
+                                <div class="flex-horizontal justify-start w-clearfix">
+                                    <img src="assets/images/graduation-icon-portfolix-x.png" loading="eager" alt="Education Icon - Portfolix X Webflow Template" class="heading-icon _48px alt" />
+                                </div>
+                                <div class="mg-top-extra-small">
+                                    <h3 class="display-7 mid">Education</h3>
+                                </div>
+                                <div class="mg-top-extra-small">
+                                    <p>The technical foundation behind how I think about problems — even if my career ended up somewhere I didn&#x27;t expect.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="career-content">
+                            <div class="grid-1-column gap-row-none">
+                                <!-- 1. B.S. in Electrical & Electronics Engineering -->
+                                <div class="resume-card-wrapper">
+                                    <div class="resume-card---content-wrapper">
+                                        <div class="resume-card---details-wrapper center">
+                                            <div>
+                                                <h4 class="display-4 mid">B.S. in Electrical &amp; Electronics Engineering</h4>
+                                                <div class="mg-top-tiny">
+                                                    <div class="display-2">Ranada Prasad Shaha University</div>
+                                                </div>
+                                            </div>
+                                            <div class="badge secondary mid"><span class="text-paragraph">2017 — 2021</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="divider mg-medium"></div>
+                                <!-- 2. Diploma in Electrical -->
+                                <div class="resume-card-wrapper">
+                                    <div class="resume-card---content-wrapper">
+                                        <div class="resume-card---details-wrapper center">
+                                            <div>
+                                                <h4 class="display-4 mid">Diploma in Electrical</h4>
+                                                <div class="mg-top-tiny">
+                                                    <div class="display-2">Munshiganj Polytechnic Institute</div>
+                                                </div>
+                                            </div>
+                                            <div class="badge secondary mid"><span class="text-paragraph">2012 — 2016</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. FOLLOW MY WORK (PORTFOLIX X EXACT MATCH FROM SPA) -->
+            <section class="section bottom">
+                <div class="w-layout-blockcontainer container-default w-container">
+                    <div class="inner-container _990px center">
+                        <div class="heading-wrapper center alt-v2 w-clearfix">
+                            <img src="assets/images/follow-my-work-icon-portfolix-x.png" loading="eager" alt="Follow My Work Icon - Portfolix X Webflow Template" class="heading-icon medium" />
+                            <h2 class="display-9 mid">Follow <span class="text-no-wrap">my work</span></h2>
+                        </div>
+                        <div class="mg-top-extra-large">
+                            <div class="w-layout-grid grid-3-columns gallery-grid">
+                                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="image-wrapper border-radius-image-default gallery-link w-inline-block">
+                                    <img src="assets/images/gallery-1-portfolix-x.png" loading="eager" alt="Techbeta X Project - Portfolix X Webflow Template" class="image cover-image" />
+                                </a>
+                                <a id="w-node-d7838286-6710-e626-cde7-32a94d28924d-4d289240" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="image-wrapper border-radius-image-default gallery-link gallery-featured w-inline-block">
+                                    <img src="assets/images/gallery-3-portfolix-x.png" loading="eager" alt="Creativflow X Project - Portfolix X Webflow Template" class="image cover-image" />
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="image-wrapper border-radius-image-default gallery-link w-inline-block">
+                                    <img src="assets/images/gallery-4-portfolix-x.png" loading="eager" alt="Bnkify X Project - Portfolix X Webflow Template" class="image cover-image" />
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="image-wrapper border-radius-image-default gallery-link w-inline-block">
+                                    <img src="assets/images/gallery-2-portfolix-x.png" loading="eager" alt="Cryptotech X Project - Portfolix X Webflow Template" class="image cover-image" />
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="image-wrapper border-radius-image-default gallery-link w-inline-block">
+                                    <img src="assets/images/gallery-5-portfolix-x.png" loading="eager" alt="Invstor X Project - Portfolix X Webflow Template" class="image cover-image" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mg-top-large">
+                            <div class="title-left---content-right">
+                                <div class="display-3 mid color-neutral-700">Follow me <span class="text-no-wrap">work in:</span></div>
+                                <div class="social-media-grid">
+                                    <a href="https://www.behance.net/rasidulislamsajib1" target="_blank" rel="noopener noreferrer" class="text-link alt-v2">Behance</a>
+                                    <a href="https://www.linkedin.com/in/rasidulislamsajib1/" target="_blank" rel="noopener noreferrer" class="text-link alt-v2">LinkedIn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER (GLOBAL PORTFOLIX X) -->
+        <footer class="footer-wrapper">
+
+            <div class="footer-middle">
+                <div class="w-layout-blockcontainer container-default w-container">
+                    <div class="footer-modern-grid">
+                        <!-- Col 1: Identity & Availability -->
+                        <div class="footer-col-brand">
+                            <a href="index.html" class="footer-brand-title">
+                                <span class="brand-name">Rasidul Islam</span>
+                            </a>
+                            <p class="footer-bio-text">Product-focused Designer &amp; Developer crafting digital products through UI/UX, branding, and modern development.</p>
+                            <div class="footer-availability-badge">
+                                <span class="availability-badge-text">Available for freelance &amp; remote roles</span>
+                            </div>
+                        </div>
+
+                        <!-- Col 2: Navigation / Explore -->
+                        <div class="footer-nav-block">
+                            <div class="footer-title">Explore</div>
+                            <ul role="list" class="footer-column-links">
+                                <li class="footer-column-item">
+                                    <a href="index.html" class="footer-item-link w-inline-block">
+                                        <span>Home</span>
+                                    </a>
+                                </li>
+                                <li class="footer-column-item">
+                                    <a href="about.html" class="footer-item-link w-inline-block w--current">
+                                        <span>About</span>
+                                    </a>
+                                </li>
+                                <li class="footer-column-item">
+                                    <a href="work.html" class="footer-item-link w-inline-block">
+                                        <span>Work</span>
+                                    </a>
+                                </li>
+                                <li class="footer-column-item">
+                                    <a href="contact.html" class="footer-item-link w-inline-block">
+                                        <span>Contact</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 3: Services -->
+                        <div class="footer-nav-block">
+                            <div class="footer-title">Services</div>
+                            <ul role="list" class="footer-column-links">
+                                <li class="footer-column-item">
+                                    <a href="index.html#projects" class="footer-item-link w-inline-block">
+                                        <span>Product Design</span>
+                                        <span class="link-arrow">↗</span>
+                                    </a>
+                                </li>
+                                <li class="footer-column-item">
+                                    <a href="index.html#projects" class="footer-item-link w-inline-block">
+                                        <span>UI/UX Design</span>
+                                        <span class="link-arrow">↗</span>
+                                    </a>
+                                </li>
+                                <li class="footer-column-item">
+                                    <a href="index.html#about" class="footer-item-link w-inline-block">
+                                        <span>Brand Identity</span>
+                                        <span class="link-arrow">↗</span>
+                                    </a>
+                                </li>
+                                <li class="footer-column-item">
+                                    <a href="index.html#projects" class="footer-item-link w-inline-block">
+                                        <span>Frontend Dev</span>
+                                        <span class="link-arrow">↗</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 4: Connect -->
+                        <div class="footer-nav-block">
+                            <div class="footer-title">Connect</div>
+                            <div class="footer-connect-info">
+                                <div class="footer-location-item">
+                                    <span>📍 Dhaka, Bangladesh</span>
+                                </div>
+                                <div>
+                                    <a href="mailto:rasidulislam699@gmail.com" class="footer-direct-email">rasidulislam699@gmail.com</a>
+                                </div>
+                                <div class="footer-social-chips">
+                                    <a href="https://www.linkedin.com/in/rasidulislamsajib1/" target="_blank" rel="noopener noreferrer" class="footer-social-chip">
+                                        <span>LinkedIn</span>
+                                        <span>↗</span>
+                                    </a>
+                                    <a href="https://www.behance.net/rasidulislamsajib1" target="_blank" rel="noopener noreferrer" class="footer-social-chip">
+                                        <span>Behance</span>
+                                        <span>↗</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="w-layout-blockcontainer container-default w-container">
+                    <div class="footer-bottom-flex">
+                        <div class="footer-copyright-text">© 2026 Rasidul Islam. All rights reserved.</div>
+                        <div class="footer-built-with-text">Designed &amp; built with curiosity.</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/webflow.js"></script>
+    <script src="assets/js/main.js?v=2"></script>
+    <script>
+        // Skills Slider Navigation
+        const skillsTrack = document.getElementById('skillsTrack');
+        const prevBtn = document.getElementById('skillPrevBtn');
+        const nextBtn = document.getElementById('skillNextBtn');
+
+        if (skillsTrack && prevBtn && nextBtn) {
+            let currentSlide = 0;
+            const slides = skillsTrack.querySelectorAll('.w-slide');
+            const totalSlides = slides.length;
+            const slideStep = 374; // 350px card + 24px margin
+
+            function updateSlider() {
+                const maxSlide = Math.max(0, totalSlides - 3);
+                skillsTrack.style.transform = `translate3d(-${currentSlide * slideStep}px, 0px, 0px)`;
+            }
+
+            nextBtn.addEventListener('click', () => {
+                const maxSlide = Math.max(0, totalSlides - 3);
+                if (currentSlide < maxSlide) {
+                    currentSlide++;
+                } else {
+                    currentSlide = 0;
+                }
+                updateSlider();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                const maxSlide = Math.max(0, totalSlides - 3);
+                if (currentSlide > 0) {
+                    currentSlide--;
+                } else {
+                    currentSlide = maxSlide;
+                }
+                updateSlider();
+            });
+        }
+    </script>
+</body>
+</html>

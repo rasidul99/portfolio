@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>SPW Enterprise Design System — Style Guide & Component Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="assets/images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="assets/css/webflow.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/design-system.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* Dedicated Style Guide Workbench Styles */
+        body {
+            background-color: #f8f9fa;
+            color: var(--ds-text-primary);
+            font-family: var(--ds-font-sans);
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        /* Top Bar */
+        .sg-topbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--ds-border-subtle);
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sg-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .sg-version-tag {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 3px 8px;
+            background: #eef2ff;
+            color: #4f46e5;
+            border-radius: var(--ds-radius-pill);
+        }
+        .sg-nav {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .sg-nav a {
+            color: var(--ds-text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color var(--ds-transition-fast);
+        }
+        .sg-nav a:hover {
+            color: var(--ds-text-primary);
+        }
+
+        /* Hero Banner */
+        .sg-hero {
+            background: var(--ds-bg-surface-dark);
+            color: var(--ds-text-inverse);
+            padding: 72px 32px 64px;
+            position: relative;
+            overflow: hidden;
+        }
+        .sg-hero::after {
+            content: '';
+            position: absolute;
+            top: -150px;
+            right: -100px;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(255, 187, 83, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .sg-hero-inner {
+            max-width: 1192px;
+            margin: 0 auto;
+        }
+        .sg-hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin: 0 0 12px;
+            line-height: 1.15;
+            color: #ffffff !important;
+        }
+        .sg-hero p {
+            font-size: 18px;
+            color: var(--ds-text-inverse-muted);
+            max-width: 680px;
+            margin: 0 0 24px;
+        }
+
+        /* Section Wrappers */
+        .sg-content-wrapper {
+            max-width: 1192px;
+            margin: 0 auto;
+            padding: 48px 24px 100px;
+        }
+        .sg-section-card {
+            background: #ffffff;
+            border: 1px solid var(--ds-border-subtle);
+            border-radius: var(--ds-radius-2xl);
+            padding: 36px 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
+        }
+        .sg-section-card h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 0 8px;
+            letter-spacing: -0.02em;
+        }
+        .sg-section-card .sg-section-desc {
+            font-size: 14px;
+            color: var(--ds-text-muted);
+            margin: 0 0 28px;
+        }
+
+        /* Color Swatches Grid */
+        .sg-swatch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 16px;
+        }
+        .sg-swatch {
+            border: 1px solid var(--ds-border-subtle);
+            border-radius: var(--ds-radius-md);
+            overflow: hidden;
+            background: #fff;
+            cursor: pointer;
+            transition: transform var(--ds-transition-fast), box-shadow var(--ds-transition-fast);
+        }
+        .sg-swatch:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--ds-shadow-md);
+        }
+        .sg-swatch-color {
+            height: 72px;
+            width: 100%;
+            position: relative;
+        }
+        .sg-swatch-info {
+            padding: 10px 12px;
+        }
+        .sg-swatch-name {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--ds-text-secondary);
+            margin-bottom: 2px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .sg-swatch-hex {
+            font-family: monospace;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--ds-text-primary);
+        }
+
+        /* Typography Scale Specimen */
+        .sg-type-row {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--ds-border-subtle);
+            gap: 24px;
+        }
+        .sg-type-meta {
+            width: 220px;
+            flex-shrink: 0;
+        }
+        .sg-type-meta code {
+            font-size: 12px;
+            color: #4f46e5;
+            background: #eef2ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .sg-type-meta .sg-type-specs {
+            font-size: 12px;
+            color: var(--ds-text-muted);
+            margin-top: 4px;
+        }
+        .sg-type-preview {
+            flex-grow: 1;
+            word-break: break-word;
+        }
+
+        /* Spacing Visualizer */
+        .sg-spacing-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 10px;
+        }
+        .sg-spacing-label {
+            width: 150px;
+            font-family: monospace;
+            font-size: 13px;
+            color: var(--ds-text-secondary);
+            flex-shrink: 0;
+        }
+        .sg-spacing-bar-wrap {
+            flex-grow: 1;
+            background: var(--ds-color-neutral-100);
+            border-radius: 4px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+        }
+        .sg-spacing-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            border-radius: 4px;
+        }
+        .sg-spacing-val {
+            font-size: 12px;
+            font-weight: 600;
+            color: #4b5563;
+            margin-left: 12px;
+            width: 50px;
+        }
+
+        /* Elevation & Shadow Cards */
+        .sg-shadow-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .sg-shadow-box {
+            padding: 32px 24px;
+            border-radius: var(--ds-radius-2xl);
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: all var(--ds-transition-normal);
+        }
+        .sg-shadow-box.dark {
+            background: var(--ds-bg-surface-dark);
+            color: #ffffff;
+        }
+
+        /* Button Lab Component Canvas */
+        .sg-component-canvas {
+            background: #fafafa;
+            border: 1px dashed #d4d4d8;
+            border-radius: var(--ds-radius-xl);
+            padding: 36px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            align-items: center;
+        }
+
+        /* Toast notification */
+        .sg-toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--ds-color-neutral-900);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: var(--ds-radius-pill);
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            pointer-events: none;
+            z-index: 9999;
+        }
+        .sg-toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Top Navigation Bar -->
+    <header class="sg-topbar">
+        <div class="sg-brand">
+            <span>SPW Design System</span>
+            <span class="sg-version-tag">v1.0.0</span>
+        </div>
+        <nav class="sg-nav">
+            <a href="#colors">Colors</a>
+            <a href="#typography">Typography</a>
+            <a href="#spacing">Spacing</a>
+            <a href="#elevation">Elevation & Tactile</a>
+            <a href="#buttons">Buttons</a>
+            <a href="#components">Badges</a>
+            <a href="#cards">Cards & Grid</a>
+            <a href="index.html" class="ds-btn ds-btn-secondary" style="padding: 6px 14px; font-size: 13px;">← Live Portfolio</a>
+        </nav>
+    </header>
+
+    <!-- Header Hero Banner -->
+    <section class="sg-hero">
+        <div class="sg-hero-inner">
+            <div class="ds-badge ds-badge-dark" style="margin-bottom: 16px;">
+                <span class="ds-dot-live"></span>
+                <span>Production Token Architecture</span>
+            </div>
+            <h1>SPW Enterprise Design System</h1>
+            <p>A unified, tokenized design language engineered for Portfolix. Establishes mathematical harmony across typography, 8pt modular spacing, signature tactile elevations, and modular UI components.</p>
+            <div style="display: flex; gap: 16px; align-items: center;">
+                <a href="#buttons" class="ds-btn ds-btn-primary">
+                    <span>Explore Component Suite</span>
+                    <span class="ds-btn-icon-orange">➔</span>
+                </a>
+                <a href="index.html" class="ds-btn ds-btn-outline" style="color: #fff; border-color: rgba(255,255,255,0.2);">
+                    <span>Back to Portfolio Homepage</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="sg-content-wrapper">
+
+        <!-- 1. COLOR SYSTEM -->
+        <section id="colors" class="sg-section-card">
+            <h2>1. Color Primitives & Brand Palette</h2>
+            <p class="sg-section-desc">Click any swatch to copy its CSS variable name to your clipboard.</p>
+
+            <h3 style="font-size: 16px; margin: 0 0 16px; color: var(--ds-text-secondary);">Neutrals Scale</h3>
+            <div class="sg-swatch-grid" style="margin-bottom: 32px;">
+                <div class="sg-swatch" onclick="copyToken('--ds-color-neutral-0')">
+                    <div class="sg-swatch-color" style="background: #ffffff; border-bottom: 1px solid #efefef;"></div>
+                    <div class="sg-swatch-info">
+                        <div class="sg-swatch-name">Neutral 0</div>
+                        <div class="sg-swatch-hex">#ffffff</div>
+                    </div>
+                </div>
+                <div class="sg-swatch" onclick="copyToken('--ds-color-neutral-50')">
+                    <div class="sg-swatch-color" style="background: #fafafa; border-bottom: 1px solid #efefef;"></div>
+                    <div class="sg-swatch-info">
+                        <div class="sg-swatch-name">Neutral 50 (Card)</div>
+                        <div class="sg-swatch-hex">#fafafa</div>
+                    </div>
+                </div>
+                <div class="sg-swatch" onclick="copyToken('--ds-color-neutral-100')">
+                    <div class="sg-swatch-color" style="background: #f4f4f5;"></div>
+                    <div class="sg-swatch-info">
+                        <div class="sg-swatch-name">Neutral 100</div>
+                        <div class="sg-swatch-hex">#f4f4f5</div>
+                    </div>
+                </div>
+                <div class="sg-swatch" onclick="copyToken('--ds-color-neutral-200')">
+                    <div class="sg-swatch-color" style="background: #efefef;"></div>
+                    <div class="sg-swatch-info">
+                        <div class="sg-swatch-name">Neutral 200 (Border)</div>
+                        <div class="sg-swatch-hex">#efefef</div>
+                    </div>
+                </div>
+                <div class="sg-swatch" onclick="copyToken('--ds-color-neutral-300')">
+                    <div class="sg-swatch-color" style="background: #e4e4e7;"></div>
+                    <div class="sg-swatch-info">
+                        <div class="sg-swatch-name">Neutral 300</div>
+                        <div class="sg-swatch-hex">#e4e4e7</div>
+                    </div>
+                </div>
+                <div class="sg-swatch" onclick="copyToken('--ds-color-neutral-500')">
+                    <div class="sg-swatch-color" style="background: #8a8a8a;"></div>
+                    <div class="sg-swatch-info">
+                        <div class="sg-swatch-name">Neutral 500</div>
+                        <div class="sg-swatch-hex">#8a8a8a</div>
+                    </div>
+                </div>
+                <div class="sg-swatch" onclick="copyToken('--ds-color-neutral-600')">
+                    <div class="sg-swatch-color" style="background: #747474;"></div>
+                    <div class="sg-swatch-info">
+                        <div class="sg-swatch-name">Neutral 600 (Text)</div>
+                        <div class="sg-swatch-hex">#747474</div>
+                    </div>
+                </div>
+                <div class="sg-swatch" onclick="copyToken('--ds-color-neutral-700')">
+                    <div class="sg-swatch-color" style="background: #565656;"></div>
+                    <div class="sg-swatch-info">
+                        <div class="sg-swatch-name">Neutral 700</div>
+                        <div class="sg-swatch-hex">#565656</div>
+                    </div>
+                </div>
+                <div class="sg-swatch" onclick="copyToken('--ds-color-neutral-800')">
+                    <div class="sg-swatch-color" style="background: #242424;"></div>
+                    <div class="sg-swatch-info">
+                        <div class="sg-swatch-name">Neutral 800</div>
+                        <div class="sg-swatch-hex">#242424</div>
+                    </div>
+                </div>
+                <div class="sg-swatch" onclick="copyToken('--ds-color-neutral-900')">
+                    <div class="sg-swatch-color" style="background: #121316;"></div>
+                    <div class="sg-swatch-info">
+                        <div class="sg-swatch-name">Neutral 900 (Dark)</div>
+                        <div class="sg-swatch-hex">#121316</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="font-size: 16px; margin: 0 0 16px; color: var(--ds-text-secondary);">Brand Accents & Tactile Gradients</h3>
+            <div class="sg-swatch-grid">
+                <div class="sg-swatch" onclick="copyToken('--ds-gradient-accent-orange')">
+                    <div class="sg-swatch-color" style="background-image: var(--ds-gradient-accent-orange);"></div>
+                    <div class="sg-swatch-info">
+                        <div class="sg-swatch-name">Action Orange Gradient</div>
+                        <div class="sg-swatch-hex">#ffba49</div>
+                    </div>
+                </div>
+                <div class="sg-swatch" onclick="copyToken('--ds-gradient-status-green')">
+                    <div class="sg-swatch-color" style="background-image: var(--ds-gradient-status-green);"></div>
+                    <div class="sg-swatch-info">
+                        <div class="sg-swatch-name">Live Status Green</div>
+                        <div class="sg-swatch-hex">#49da71</div>
+                    </div>
+                </div>
+                <div class="sg-swatch" onclick="copyToken('--ds-gradient-dark-card')">
+                    <div class="sg-swatch-color" style="background: var(--ds-gradient-dark-card);"></div>
+                    <div class="sg-swatch-info">
+                        <div class="sg-swatch-name">Dark Card Gradient</div>
+                        <div class="sg-swatch-hex">#3c3c3c → #242424</div>
+                    </div>
+                </div>
+                <div class="sg-swatch" onclick="copyToken('--ds-gradient-text-light')">
+                    <div class="sg-swatch-color" style="background: var(--ds-color-neutral-900); display: flex; align-items: center; justify-content: center;">
+                        <span class="ds-gradient-text" style="font-size: 20px; font-weight: 700;">Aa Gradient</span>
+                    </div>
+                    <div class="sg-swatch-info">
+                        <div class="sg-swatch-name">Text Light Gradient</div>
+                        <div class="sg-swatch-hex">#fff → #cdcdcd</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. TYPOGRAPHY SPECIMEN -->
+        <section id="typography" class="sg-section-card">
+            <h2>2. Typography Scale (Inter + 1.25 Major Third)</h2>
+            <p class="sg-section-desc">Responsive display and body scale preserving mathematical rhythm and proportional line-heights.</p>
+
+            <div class="sg-type-row">
+                <div class="sg-type-meta">
+                    <code>--ds-text-display-2xl</code>
+                    <div class="sg-type-specs">64px / 1.115em / Bold</div>
+                </div>
+                <div class="sg-type-preview ds-text-2xl">
+                    Crafting high-impact digital experiences
+                </div>
+            </div>
+
+            <div class="sg-type-row">
+                <div class="sg-type-meta">
+                    <code>--ds-text-display-xl</code>
+                    <div class="sg-type-specs">48px / 1.25em / Bold</div>
+                </div>
+                <div class="sg-type-preview ds-text-xl">
+                    Let's work together!
+                </div>
+            </div>
+
+            <div class="sg-type-row">
+                <div class="sg-type-meta">
+                    <code>--ds-text-display-lg</code>
+                    <div class="sg-type-specs">32px / 1.25em / SemiBold</div>
+                </div>
+                <div class="sg-type-preview ds-text-lg">
+                    What my clients say about me
+                </div>
+            </div>
+
+            <div class="sg-type-row">
+                <div class="sg-type-meta">
+                    <code>--ds-text-display-md</code>
+                    <div class="sg-type-specs">24px / 1.25em / SemiBold</div>
+                </div>
+                <div class="sg-type-preview ds-text-md">
+                    Mobile Banking App & Design System
+                </div>
+            </div>
+
+            <div class="sg-type-row">
+                <div class="sg-type-meta">
+                    <code>--ds-text-body-lg</code>
+                    <div class="sg-type-specs">18px / 1.5em / Regular</div>
+                </div>
+                <div class="sg-type-preview" style="font-size: var(--ds-text-body-lg);">
+                    I help tech companies design scalable web applications and elevate brand identity.
+                </div>
+            </div>
+
+            <div class="sg-type-row">
+                <div class="sg-type-meta">
+                    <code>--ds-text-body-md</code>
+                    <div class="sg-type-specs">16px / 1.5em / Regular</div>
+                </div>
+                <div class="sg-type-preview ds-text-body">
+                    Standard body copy utilized for portfolio project overviews, client testimonials, and blog articles.
+                </div>
+            </div>
+
+            <div class="sg-type-row">
+                <div class="sg-type-meta">
+                    <code>--ds-text-body-sm</code>
+                    <div class="sg-type-specs">14px / 1.4em / Medium</div>
+                </div>
+                <div class="sg-type-preview" style="font-size: var(--ds-text-body-sm); color: var(--ds-text-secondary);">
+                    UI/UX Design • Interactive Prototyping • Design Systems
+                </div>
+            </div>
+
+            <div class="sg-type-row">
+                <div class="sg-type-meta">
+                    <code>--ds-text-caption</code>
+                    <div class="sg-type-specs">12px / 1.3em / Medium</div>
+                </div>
+                <div class="sg-type-preview" style="font-size: var(--ds-text-caption); color: var(--ds-text-muted);">
+                    © 2026 Portfolix X. All rights reserved. Powered by Webflow & SPW Design System.
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SPACING SYSTEM (8PT BASE GRID) -->
+        <section id="spacing" class="sg-section-card">
+            <h2>3. 8pt Modular Spacing Scale</h2>
+            <p class="sg-section-desc">Strict 8pt-based increments for padding, margin, and layout gap harmony.</p>
+
+            <div class="sg-spacing-row">
+                <div class="sg-spacing-label">--ds-space-1</div>
+                <div class="sg-spacing-bar-wrap"><div class="sg-spacing-bar" style="width: 4px;"></div></div>
+                <div class="sg-spacing-val">4px</div>
+            </div>
+            <div class="sg-spacing-row">
+                <div class="sg-spacing-label">--ds-space-2</div>
+                <div class="sg-spacing-bar-wrap"><div class="sg-spacing-bar" style="width: 8px;"></div></div>
+                <div class="sg-spacing-val">8px</div>
+            </div>
+            <div class="sg-spacing-row">
+                <div class="sg-spacing-label">--ds-space-3</div>
+                <div class="sg-spacing-bar-wrap"><div class="sg-spacing-bar" style="width: 12px;"></div></div>
+                <div class="sg-spacing-val">12px</div>
+            </div>
+            <div class="sg-spacing-row">
+                <div class="sg-spacing-label">--ds-space-4</div>
+                <div class="sg-spacing-bar-wrap"><div class="sg-spacing-bar" style="width: 16px;"></div></div>
+                <div class="sg-spacing-val">16px</div>
+            </div>
+            <div class="sg-spacing-row">
+                <div class="sg-spacing-label">--ds-space-6</div>
+                <div class="sg-spacing-bar-wrap"><div class="sg-spacing-bar" style="width: 24px;"></div></div>
+                <div class="sg-spacing-val">24px</div>
+            </div>
+            <div class="sg-spacing-row">
+                <div class="sg-spacing-label">--ds-space-8</div>
+                <div class="sg-spacing-bar-wrap"><div class="sg-spacing-bar" style="width: 32px;"></div></div>
+                <div class="sg-spacing-val">32px</div>
+            </div>
+            <div class="sg-spacing-row">
+                <div class="sg-spacing-label">--ds-space-12</div>
+                <div class="sg-spacing-bar-wrap"><div class="sg-spacing-bar" style="width: 48px;"></div></div>
+                <div class="sg-spacing-val">48px</div>
+            </div>
+            <div class="sg-spacing-row">
+                <div class="sg-spacing-label">--ds-space-16</div>
+                <div class="sg-spacing-bar-wrap"><div class="sg-spacing-bar" style="width: 64px;"></div></div>
+                <div class="sg-spacing-val">64px</div>
+            </div>
+            <div class="sg-spacing-row">
+                <div class="sg-spacing-label">--ds-space-20</div>
+                <div class="sg-spacing-bar-wrap"><div class="sg-spacing-bar" style="width: 80px;"></div></div>
+                <div class="sg-spacing-val">80px</div>
+            </div>
+        </section>
+
+        <!-- 4. ELEVATION & SIGNATURE SHADOWS -->
+        <section id="elevation" class="sg-section-card">
+            <h2>4. Tactile Shadows & Elevation</h2>
+            <p class="sg-section-desc">Portfolix signature embossed multi-stop shadows creating tangible depth on flat web surfaces.</p>
+
+            <div class="sg-shadow-grid">
+                <!-- Embossed Navbar Elevation -->
+                <div class="sg-shadow-box" style="box-shadow: var(--ds-shadow-navbar); border: 1px solid var(--ds-border-subtle); background: var(--ds-bg-surface-card);">
+                    <div style="font-weight: 700; margin-bottom: 8px;">Navbar Embossed</div>
+                    <code style="font-size: 11px; color: #4f46e5;">--ds-shadow-navbar</code>
+                    <p style="font-size: 12px; color: var(--ds-text-secondary); margin-top: 8px;">Top highlight (#ffffff) with bottom tactile depression (#efefef)</p>
+                </div>
+
+                <!-- 3D Glowing Button Shadow -->
+                <div class="sg-shadow-box" style="background: #18181b; color: #fff;">
+                    <div class="ds-btn-icon-orange" style="width: 48px; height: 48px; font-size: 20px; margin-bottom: 12px;">➔</div>
+                    <div style="font-weight: 700; margin-bottom: 4px;">Tactile 3D Glow</div>
+                    <code style="font-size: 11px; color: #ffba49;">--ds-shadow-button-glow</code>
+                    <p style="font-size: 12px; color: #a1a1aa; margin-top: 8px;">4-stop inner shadow creating realistic spherical volume</p>
+                </div>
+
+                <!-- Ambient Card Elevation -->
+                <div class="sg-shadow-box" style="box-shadow: var(--ds-shadow-card); border: 1px solid var(--ds-border-subtle);">
+                    <div style="font-weight: 700; margin-bottom: 8px;">Card Surface Elevation</div>
+                    <code style="font-size: 11px; color: #4f46e5;">--ds-shadow-card</code>
+                    <p style="font-size: 12px; color: var(--ds-text-secondary); margin-top: 8px;">Soft 20px ambient blur with 1px structural hairline border</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. BUTTON LABORATORY -->
+        <section id="buttons" class="sg-section-card">
+            <h2>5. Reusable Button Laboratory</h2>
+            <p class="sg-section-desc">Standardized interactive button suite with hover and active physics.</p>
+
+            <div class="sg-component-canvas">
+                <!-- Primary Pill with Orange Glow -->
+                <a href="#contact" class="ds-btn ds-btn-primary">
+                    <span>Get in Touch</span>
+                    <span class="ds-btn-icon-orange">➔</span>
+                </a>
+
+                <!-- Secondary Pill -->
+                <a href="#projects" class="ds-btn ds-btn-secondary">
+                    <span>Explore All Projects</span>
+                </a>
+
+                <!-- Outline Button -->
+                <a href="#services" class="ds-btn ds-btn-outline">
+                    <span>View Services</span>
+                </a>
+
+                <!-- Link with Animated Arrow -->
+                <a href="#products" class="ds-link">
+                    <span>Browse Figma Kits</span>
+                    <span class="ds-arrow">↗</span>
+                </a>
+            </div>
+
+            <!-- Code Copy Snippet -->
+            <div style="margin-top: 24px; background: #18181b; border-radius: 12px; padding: 18px 24px; color: #f4f4f5; font-family: monospace; font-size: 13px; position: relative;">
+                <span style="color: #94a3b8;">&lt;!-- Primary Action Button HTML --&gt;</span><br>
+                &lt;a href="#" class="<span style="color: #67e8f9;">ds-btn ds-btn-primary</span>"&gt;<br>
+                &nbsp;&nbsp;&lt;span&gt;Get in Touch&lt;/span&gt;<br>
+                &nbsp;&nbsp;&lt;span class="<span style="color: #fca5a5;">ds-btn-icon-orange</span>"&gt;➔&lt;/span&gt;<br>
+                &lt;/a&gt;
+            </div>
+        </section>
+
+        <!-- 6. BADGES & LIVE INDICATORS -->
+        <section id="components" class="sg-section-card">
+            <h2>6. Badges & Live Status Indicators</h2>
+            <p class="sg-section-desc">Pill badges for skill tags, availability states, and product categories.</p>
+
+            <div class="sg-component-canvas" style="background: #ffffff;">
+                <!-- Live Pulsating Availability Badge -->
+                <div class="ds-badge">
+                    <span class="ds-dot-live"></span>
+                    <span>Available for new projects</span>
+                </div>
+
+                <!-- Product Price Tag -->
+                <div class="ds-badge" style="font-weight: 700; color: #121316;">
+                    <span>$49.00 USD</span>
+                </div>
+
+                <!-- Skill Tag -->
+                <div class="ds-badge">
+                    <span>UX / Design Systems</span>
+                </div>
+            </div>
+
+            <!-- Dark Mode Badges Showcase -->
+            <div class="sg-component-canvas" style="background: var(--ds-bg-surface-dark); margin-top: 16px;">
+                <div class="ds-badge ds-badge-dark">
+                    <span class="ds-dot-live"></span>
+                    <span>Accepting Q3 Bookings</span>
+                </div>
+
+                <div class="ds-badge ds-badge-dark">
+                    <span>Enterprise Tier</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CARD CONTAINERS & MEDIA PREVIEW -->
+        <section id="cards" class="sg-section-card">
+            <h2>7. Card Containers & Grid System</h2>
+            <p class="sg-section-desc">Modular card structures with 24px radius, tactile hover lifts, and media zoom wrappers.</p>
+
+            <div class="ds-grid-2">
+                <!-- Light Card -->
+                <div class="ds-card">
+                    <div class="ds-media-wrapper" style="margin-bottom: 20px;">
+                        <img src="assets/images/projects/bnkify-x.jpg" alt="Portfolio Preview" style="width: 100%; height: 200px; object-fit: cover;">
+                    </div>
+                    <div class="ds-flex-between" style="margin-bottom: 12px;">
+                        <div class="ds-badge" style="font-size: 12px;">Product Design</div>
+                        <span style="font-size: 13px; color: var(--ds-text-muted);">2026 Case Study</span>
+                    </div>
+                    <h3 style="font-size: 20px; font-weight: 700; margin: 0 0 8px;">Banking iOS Mobile App</h3>
+                    <p class="ds-text-body" style="font-size: 14px; margin-bottom: 20px;">Full end-to-end design system and user experience flow for a fintech product.</p>
+                    <a href="#" class="ds-link">
+                        <span>Read full case study</span>
+                        <span class="ds-arrow">↗</span>
+                    </a>
+                </div>
+
+                <!-- Dark Card -->
+                <div class="ds-card-dark">
+                    <div class="ds-media-wrapper" style="margin-bottom: 20px; background: #2a2a2a;">
+                        <img src="assets/images/projects/creativflow-x.jpg" alt="Design Kit" style="width: 100%; height: 200px; object-fit: cover;">
+                    </div>
+                    <div class="ds-flex-between" style="margin-bottom: 12px;">
+                        <div class="ds-badge ds-badge-dark" style="font-size: 12px;">UI Kit</div>
+                        <span style="font-size: 13px; color: #a1a1aa;">$39 USD</span>
+                    </div>
+                    <h3 style="font-size: 20px; font-weight: 700; margin: 0 0 8px; color: #ffffff;">Figma Wireframe Kit v2</h3>
+                    <p style="font-size: 14px; color: #a1a1aa; margin-bottom: 20px;">A comprehensive wireframing starter kit equipped with 200+ modular auto-layout components.</p>
+                    <a href="#" class="ds-link" style="color: #ffffff;">
+                        <span>Get template now</span>
+                        <span class="ds-arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Toast Notification for Token Copy -->
+    <div id="sgToast" class="sg-toast">Copied to clipboard!</div>
+
+    <script>
+        function copyToken(token) {
+            navigator.clipboard.writeText(`var(${token})`).then(() => {
+                const toast = document.getElementById('sgToast');
+                toast.innerText = `Copied var(${token}) to clipboard!`;
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2200);
+            });
+        }
+    </script>
+</body>
+</html>

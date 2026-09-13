@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html data-wf-domain="portfolixtemplate.webflow.io" data-wf-page="66848e16c2334fdbe55c3064" data-wf-site="667c1fe7c451b2511da725f9" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Contact - Rasidul Islam | Product-focused Designer & Developer</title>
+    <meta content="Get in touch with Rasidul Islam, a Product-focused Designer & Developer crafting meaningful digital experiences." name="description" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    
+    <!-- Favicon -->
+    <link href="assets/images/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    
+    <!-- Google Fonts: Inter (100 to 900) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+
+    <!-- Core & Custom Stylesheets -->
+    <link href="assets/css/webflow.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/design-system.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        .nav-center-link.active {
+            color: var(--ds-text-primary) !important;
+            font-weight: 600 !important;
+        }
+        .nav-center-link.active::after {
+            width: 100% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- Floating Header & Navigation -->
+        <header class="header-container sticky-alt">
+            <div class="w-layout-blockcontainer container-default w-container">
+                <div data-animation="default" class="header-wrapper v1 w-nav" data-collapse="all" role="banner">
+                    <div class="header-wrapper header-floating">
+                        <div class="header-container-wrapper">
+                            <!-- Logo -->
+                            <div class="nav-menu-left-side">
+                                <div class="v1-logo-wrapper">
+                                    <a href="index.html" class="logo-link w-inline-block" title="Portfolix X">
+                                        <img src="assets/images/logo.png" loading="eager" alt="Portfolix X Logo" />
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Middle Navigation Links (Desktop) -->
+                            <nav class="nav-menu-center-links" role="navigation">
+                                <a href="index.html" class="nav-center-link">Home</a>
+                                <a href="about.html" class="nav-center-link">About me</a>
+                                <a href="work.html" class="nav-center-link">Work</a>
+                                <a href="contact.html" class="nav-center-link active">Contact</a>
+                            </nav>
+
+                            <!-- Right Side: Let’s talk Button & Hamburger Menu Button -->
+                            <div class="nav-menu-right-side">
+                                <a href="#contact" class="primary-button small header-shop-btn header-cta-btn w-inline-block" title="Let’s talk">
+                                    <div>Let’s talk</div>
+                                    <div class="button-icon-right small">
+                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                                            <polyline points="7 7 17 7 17 17"></polyline>
+                                        </svg>
+                                    </div>
+                                </a>
+                                <div class="hamburger-menu v2 w-nav-button" id="hamburgerBtn" aria-label="Open menu" role="button" tabindex="0">
+                                    <div class="hamburger-menu-flex v2">
+                                        <div class="hamburger-menu-line top"></div>
+                                        <div class="hamburger-menu-line bottom"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Full-Page Menu Drawer Modal -->
+        <div class="nav-menu-wrapper full-page-menu v1" id="menuDrawer">
+            <div class="full-page-menu---bg v1" id="menuBackdrop"></div>
+            <div class="list-nav-menu header-v1">
+                <div class="w-layout-blockcontainer container-default width-100 w-container">
+                    <div class="card-menu-wrapper">
+                        <div class="card-menu">
+                            <div class="card-menu---top-content">
+                                <div class="availability-wrapper">
+                                    <div class="availability-icon"></div>
+                                    <div class="text-light">
+                                        <div class="display-1 mid v2-alt" style="color: #fff; font-size: 16px; font-weight: 500;">Available for <span class="text-no-wrap">new projects</span></div>
+                                    </div>
+                                </div>
+                                <div class="card-menu---close-button" id="menuCloseBtn" title="Close menu">
+                                    <div>&#x2715;</div>
+                                </div>
+                            </div>
+                            <div class="mg-top-default mg-top-24px---mbl">
+                                <div class="card-menu---links-wrapper">
+                                    <a href="contact.html" class="card-menu---link w-inline-block w--current">
+                                        <div class="left-icon"><div class="icon-font-rounded">&#xe810;</div></div>
+                                        <div>Contact</div>
+                                    </a>
+                                    <a href="index.html#services" class="card-menu---link w-inline-block">
+                                        <div class="left-icon"><div class="icon-font-rounded">&#xe810;</div></div>
+                                        <div>Services</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mg-top-default mg-top-24px---mbl">
+                                <div class="w-layout-grid card-menu---pages-grid">
+                                    <a href="index.html" class="card-menu---link v2 w-inline-block"><div>Home</div></a>
+                                    <a href="about.html" class="card-menu---link v2 w-inline-block"><div>About me</div></a>
+                                    <a href="work.html" class="card-menu---link v2 w-inline-block"><div>Work</div></a>
+                                    <a href="index.html#shop" class="card-menu---link v2 w-inline-block"><div>Shop</div></a>
+                                    <a href="index.html#blog" class="card-menu---link v2 w-inline-block"><div>Blog</div></a>
+                                </div>
+                            </div>
+                            <div class="divider tertiary mg-default"></div>
+                            <div>
+                                <div class="display-3" style="color: rgba(255,255,255,0.7); font-size: 14px;">Follow me:</div>
+                                <div class="mg-top-extra-small">
+                                    <div class="social-media-grid small">
+                                        <a href="https://www.behance.net/rasidulislamsajib1" target="_blank" rel="noopener noreferrer" class="text-link light">Behance</a>
+                                        <a href="https://www.linkedin.com/in/rasidulislamsajib1/" target="_blank" rel="noopener noreferrer" class="text-link light">LinkedIn</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="main-wrapper">
+            <!-- 1. CONTACT HERO & FORM SECTION -->
+            <section class="section hero-section---v1">
+                <div class="w-layout-blockcontainer container-default w-container">
+                    <div class="text-center">
+                        <div class="heading-wrapper">
+                            <div class="flex-horizontal w-clearfix">
+                                <h1 class="display-10 mid">Contact me</h1>
+                                <img src="assets/images/thumbs-up-icon-portfolix-x.png" loading="eager" alt="Thumbs Up Icon - Portfolix X Webflow Template" class="heading-icon right" />
+                            </div>
+                        </div>
+                        <div class="mg-top-small">
+                            <div class="inner-container _600px center" style="max-width: 640px; margin: 0 auto;">
+                                <p style="font-size: 17px; line-height: 1.6; color: #52525b;">Have a project in mind, or just want to talk design and development? Drop a message below, or reach out directly — I usually reply within a day.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mg-top-extra-large">
+                        <div class="inner-container _990px center">
+                            <div class="w-layout-grid grid-2-columns contact-form-v1">
+                                <!-- Contact Form Card (Left) -->
+                                <div class="inner-container _662px _100-tablet">
+                                    <div class="card form-wrapper">
+                                        <div class="form-block---main w-form">
+                                            <form id="wf-form-Contact-V1-Form" name="wf-form-Contact-V1-Form" data-name="Contact V1 Form" method="get">
+                                                <div class="w-layout-grid grid-form">
+                                                    <div id="w-node-_14b30a55-db61-6943-1ed2-b409a14bed08-a14bed05">
+                                                        <label for="name">Name</label>
+                                                        <input class="input w-input" maxlength="256" name="Name" data-name="Name" placeholder="Your name" type="text" id="name" required="" />
+                                                    </div>
+                                                    <div id="w-node-_14b30a55-db61-6943-1ed2-b409a14bed0c-a14bed05">
+                                                        <label for="email">Email address</label>
+                                                        <input class="input w-input" maxlength="256" name="Email" data-name="Email" placeholder="example@youremail.com" type="email" id="email" required="" />
+                                                    </div>
+                                                    <div id="w-node-_14b30a55-db61-6943-1ed2-b409a14bed10-a14bed05">
+                                                        <label for="phone">Phone number</label>
+                                                        <input class="input w-input" maxlength="256" name="Phone" data-name="Phone" placeholder="+880 193-743 2553" type="tel" id="phone" required="" />
+                                                    </div>
+                                                    <div id="w-node-_14b30a55-db61-6943-1ed2-b409a14bed14-a14bed05">
+                                                        <label for="company">Company</label>
+                                                        <input class="input w-input" maxlength="256" name="Company" data-name="Company" placeholder="Your company or project" type="text" id="company" required="" />
+                                                    </div>
+                                                    <div id="w-node-_14b30a55-db61-6943-1ed2-b409a14bed18-a14bed05" class="select-service-container custom-dropdown-wrap">
+                                                        <div class="label">Select service</div>
+                                                        <div class="custom-select-wrapper" id="customSelectWrapper">
+                                                            <div class="custom-select-trigger" id="customSelectTrigger" tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox">
+                                                                <div class="custom-select-text placeholder" id="customSelectText">Select a service...</div>
+                                                                <div class="custom-select-arrow" id="customSelectArrow">
+                                                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="custom-select-menu" id="customSelectMenu" role="listbox">
+                                                                <div class="custom-select-option" data-value="UI/UX Design" role="option">
+                                                                    <div class="option-icon-box icon-purple">
+                                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                            <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                                                                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                                                                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="option-content">
+                                                                        <div class="option-title">UI/UX Design</div>
+                                                                        <div class="option-desc">User flows, wireframes, web &amp; mobile apps</div>
+                                                                    </div>
+                                                                    <div class="option-check">
+                                                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="custom-select-option" data-value="Branding & Visual Identity" role="option">
+                                                                    <div class="option-icon-box icon-coral">
+                                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="option-content">
+                                                                        <div class="option-title">Branding &amp; Visual Identity</div>
+                                                                        <div class="option-desc">Logos, visual identity, brand guidelines</div>
+                                                                    </div>
+                                                                    <div class="option-check">
+                                                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="custom-select-option" data-value="Web Design" role="option">
+                                                                    <div class="option-icon-box icon-blue">
+                                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                            <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                                                                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                                                                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="option-content">
+                                                                        <div class="option-title">Web Design</div>
+                                                                        <div class="option-desc">High-converting landing pages &amp; websites</div>
+                                                                    </div>
+                                                                    <div class="option-check">
+                                                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="custom-select-option" data-value="Full-Stack Development" role="option">
+                                                                    <div class="option-icon-box icon-emerald">
+                                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                            <polyline points="16 18 22 12 16 6"></polyline>
+                                                                            <polyline points="8 6 2 12 8 18"></polyline>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="option-content">
+                                                                        <div class="option-title">Full-Stack Development</div>
+                                                                        <div class="option-desc">Frontend, modern web apps &amp; integrations</div>
+                                                                    </div>
+                                                                    <div class="option-check">
+                                                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="custom-select-option" data-value="Motion Graphics & Video Editing" role="option">
+                                                                    <div class="option-icon-box icon-amber">
+                                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <div class="option-content">
+                                                                        <div class="option-title">Motion Graphics &amp; Video Editing</div>
+                                                                        <div class="option-desc">Promo videos, UI interactions &amp; motion design</div>
+                                                                    </div>
+                                                                    <div class="option-check">
+                                                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Hidden Native Select (Keeps form validation & submission working) -->
+                                                            <select id="select-service" name="Select-Service" data-name="Select Service" required="" class="visually-hidden-select">
+                                                                <option value="">Select a service...</option>
+                                                                <option value="UI/UX Design">UI/UX Design</option>
+                                                                <option value="Branding & Visual Identity">Branding &amp; Visual Identity</option>
+                                                                <option value="Web Design">Web Design</option>
+                                                                <option value="Full-Stack Development">Full-Stack Development</option>
+                                                                <option value="Motion Graphics & Video Editing">Motion Graphics &amp; Video Editing</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div id="w-node-_14b30a55-db61-6943-1ed2-b409a14bed20-a14bed05" class="text-area-wrapper">
+                                                        <label for="message">Message</label>
+                                                        <textarea id="message" name="Message" maxlength="5000" data-name="Message" placeholder="Please write your message..." required="" class="text-area w-input"></textarea>
+                                                    </div>
+                                                    <div id="w-node-_14b30a55-db61-6943-1ed2-b409a14bed24-a14bed05" class="primary-button form-btn">
+                                                        <input type="submit" data-wait="Please wait..." class="primary-button form-btn---inside w-button" value="Send message" />
+                                                        <div class="button-icon-right">
+                                                            <div class="base-icon-font">&#xe810;</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="success-message-wrapp w-form-done" style="display:none;">
+                                                <div class="card contact-form">
+                                                    <div class="icon-font-rounded thank-you-message-icon large">&#xe832;</div>
+                                                    <div class="mg-top-default">
+                                                        <div class="text-titles">
+                                                            <div class="display-5 mid">Thank you! We’ll get back to <span class="text-no-wrap">you soon</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mg-top-extra-small">
+                                                        <p class="paragraph-medium">We have received your message and will get back to you as soon as possible. Our team is dedicated to providing the best support and we appreciate <span class="text-no-wrap">your patience.</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="error-message-wrapper w-form-fail" style="display:none;">
+                                                <div>Oops! Something went wrong while submitting <span class="text-no-wrap">the form.</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Contact Information & Details (Right) -->
+                                <div class="inner-container _280px _100-tablet" style="max-width: 280px;">
+                                    <div class="w-layout-grid contact-form-grid-v1">
+                                        <div>
+                                            <div class="display-3">Follow <span class="text-no-wrap">me on</span></div>
+                                            <div class="mg-top-small">
+                                                <div class="social-media-icon-grid">
+                                                    <a href="https://www.behance.net/rasidulislamsajib1" target="_blank" rel="noopener noreferrer" class="social-media-icon-wrapper w-inline-block" title="Behance">
+                                                        <div class="icon-font-social-media">&#xe803;</div>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/in/rasidulislamsajib1/" target="_blank" rel="noopener noreferrer" class="social-media-icon-wrapper w-inline-block" title="LinkedIn">
+                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="display-3">Send me <span class="text-no-wrap">a message</span></div>
+                                            <div class="mg-top-tiny">
+                                                <div>
+                                                    <a href="mailto:rasidulislam699@gmail.com" class="link mid w-inline-block">
+                                                        <div>rasidulislam699@gmail.com</div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="display-3">Give me <span class="text-no-wrap">a call</span></div>
+                                            <div class="mg-top-tiny">
+                                                <a href="tel:+8801937432553" class="link mid w-inline-block">
+                                                    <div>+880 193-743 2553</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="display-3">Location</div>
+                                            <div class="mg-top-tiny">
+                                                <a href="https://maps.google.com/?q=Mohammadpur,+Dhaka,+Bangladesh" target="_blank" rel="noopener noreferrer" class="link mid w-inline-block">
+                                                    <div>Mohammadpur, Dhaka, Bangladesh</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. FAQS ACCORDION SECTION -->
+            <section class="section bottom">
+                <div class="w-layout-blockcontainer container-default w-container">
+                    <div class="inner-container _990px center">
+                        <div class="w-layout-grid grid-2-columns accordion-v2">
+                            <!-- Left Sticky Column -->
+                            <div class="position-sticky static---mbl">
+                                <div class="inner-container _340px">
+                                    <h2 class="display-9 mid">FAQs</h2>
+                                    <div class="mg-top-small">
+                                        <p>Lorem ipsum dolor sit amet consectetur nunc justo vitae magna arcu <span class="text-no-wrap">sed eget.</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Accordion Column -->
+                            <div class="inner-container _584px _100-mbl">
+                                <div class="w-layout-grid grid-1-column">
+                                    <!-- Accordion Item 1 -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-top">
+                                            <h3 class="display-4 mid title">Are you open for <span class="text-no-wrap normal---mbp">design collaborations?</span></h3>
+                                            <div class="accordion-icon-wrapper">
+                                                <div class="accordion-icon-line vertical"></div>
+                                                <div class="accordion-icon-line"></div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-bottom">
+                                            <p class="accordion-paragraph">Lorem ipsum dolor sit amet, consectetur cdolor col adipiscing elit. Integer mattis nunc augue vel lacinia <span class="text-no-wrap">erat euismod ut.</span></p>
+                                        </div>
+                                        <div class="accordion-item-bg"></div>
+                                    </div>
+
+                                    <!-- Accordion Item 2 -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-top">
+                                            <h3 class="display-4 mid title">Are you open for <span class="text-no-wrap normal---mbp">new projects?</span></h3>
+                                            <div class="accordion-icon-wrapper">
+                                                <div class="accordion-icon-line vertical"></div>
+                                                <div class="accordion-icon-line"></div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-bottom">
+                                            <p class="accordion-paragraph">Lorem ipsum dolor sit amet, consectetur cdolor col adipiscing elit. Integer mattis nunc augue vel lacinia <span class="text-no-wrap">erat euismod ut.</span></p>
+                                        </div>
+                                        <div class="accordion-item-bg"></div>
+                                    </div>
+
+                                    <!-- Accordion Item 3 -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-top">
+                                            <h3 class="display-4 mid title">How many years of experience <span class="text-no-wrap normal---mbp">do you have?</span></h3>
+                                            <div class="accordion-icon-wrapper">
+                                                <div class="accordion-icon-line vertical"></div>
+                                                <div class="accordion-icon-line"></div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-bottom">
+                                            <p class="accordion-paragraph">Lorem ipsum dolor sit amet, consectetur cdolor col adipiscing elit. Integer mattis nunc augue vel lacinia <span class="text-no-wrap">erat euismod ut.</span></p>
+                                        </div>
+                                        <div class="accordion-item-bg"></div>
+                                    </div>
+
+                                    <!-- Accordion Item 4 -->
+                                    <div class="accordion-item">
+                                        <div class="accordion-top">
+                                            <h3 class="display-4 mid title">Are you currently looking for <span class="text-no-wrap normal---mbp">fulltime roles?</span></h3>
+                                            <div class="accordion-icon-wrapper">
+                                                <div class="accordion-icon-line vertical"></div>
+                                                <div class="accordion-icon-line"></div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-bottom">
+                                            <p class="accordion-paragraph">Lorem ipsum dolor sit amet, consectetur cdolor col adipiscing elit. Integer mattis nunc augue vel lacinia <span class="text-no-wrap">erat euismod ut.</span></p>
+                                        </div>
+                                        <div class="accordion-item-bg"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER (GLOBAL PORTFOLIX X) -->
+        <footer class="footer-wrapper">
+
+            <div class="footer-middle">
+                <div class="w-layout-blockcontainer container-default w-container">
+                    <div class="footer-modern-grid">
+                        <!-- Col 1: Identity & Availability -->
+                        <div class="footer-col-brand">
+                            <a href="index.html" class="footer-brand-title">
+                                <span class="brand-name">Rasidul Islam</span>
+                            </a>
+                            <p class="footer-bio-text">Product-focused Designer &amp; Developer crafting digital products through UI/UX, branding, and modern development.</p>
+                            <div class="footer-availability-badge">
+                                <span class="availability-badge-text">Available for freelance &amp; remote roles</span>
+                            </div>
+                        </div>
+
+                        <!-- Col 2: Navigation / Explore -->
+                        <div class="footer-nav-block">
+                            <div class="footer-title">Explore</div>
+                            <ul role="list" class="footer-column-links">
+                                <li class="footer-column-item">
+                                    <a href="index.html" class="footer-item-link w-inline-block">
+                                        <span>Home</span>
+                                    </a>
+                                </li>
+                                <li class="footer-column-item">
+                                    <a href="about.html" class="footer-item-link w-inline-block">
+                                        <span>About</span>
+                                    </a>
+                                </li>
+                                <li class="footer-column-item">
+                                    <a href="work.html" class="footer-item-link w-inline-block">
+                                        <span>Work</span>
+                                    </a>
+                                </li>
+                                <li class="footer-column-item">
+                                    <a href="contact.html" class="footer-item-link w-inline-block w--current">
+                                        <span>Contact</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 3: Services -->
+                        <div class="footer-nav-block">
+                            <div class="footer-title">Services</div>
+                            <ul role="list" class="footer-column-links">
+                                <li class="footer-column-item">
+                                    <a href="index.html#projects" class="footer-item-link w-inline-block">
+                                        <span>Product Design</span>
+                                        <span class="link-arrow">↗</span>
+                                    </a>
+                                </li>
+                                <li class="footer-column-item">
+                                    <a href="index.html#projects" class="footer-item-link w-inline-block">
+                                        <span>UI/UX Design</span>
+                                        <span class="link-arrow">↗</span>
+                                    </a>
+                                </li>
+                                <li class="footer-column-item">
+                                    <a href="index.html#about" class="footer-item-link w-inline-block">
+                                        <span>Brand Identity</span>
+                                        <span class="link-arrow">↗</span>
+                                    </a>
+                                </li>
+                                <li class="footer-column-item">
+                                    <a href="index.html#projects" class="footer-item-link w-inline-block">
+                                        <span>Frontend Dev</span>
+                                        <span class="link-arrow">↗</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 4: Connect -->
+                        <div class="footer-nav-block">
+                            <div class="footer-title">Connect</div>
+                            <div class="footer-connect-info">
+                                <div class="footer-location-item">
+                                    <span>📍 Dhaka, Bangladesh</span>
+                                </div>
+                                <div>
+                                    <a href="mailto:rasidulislam699@gmail.com" class="footer-direct-email">rasidulislam699@gmail.com</a>
+                                </div>
+                                <div class="footer-social-chips">
+                                    <a href="https://www.linkedin.com/in/rasidulislamsajib1/" target="_blank" rel="noopener noreferrer" class="footer-social-chip">
+                                        <span>LinkedIn</span>
+                                        <span>↗</span>
+                                    </a>
+                                    <a href="https://www.behance.net/rasidulislamsajib1" target="_blank" rel="noopener noreferrer" class="footer-social-chip">
+                                        <span>Behance</span>
+                                        <span>↗</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="w-layout-blockcontainer container-default w-container">
+                    <div class="footer-bottom-flex">
+                        <div class="footer-copyright-text">© 2026 Rasidul Islam. All rights reserved.</div>
+                        <div class="footer-built-with-text">Designed &amp; built with curiosity.</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/webflow.js"></script>
+    <script src="assets/js/main.js?v=2"></script>
+</body>
+</html>
