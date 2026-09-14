@@ -4,3 +4,5 @@ node_modules/
 .vercel/
 *.psd
 test_text_compare.html
+
+server.js
